@@ -509,6 +509,16 @@ int lldpctl_watch_callback(lldpctl_conn_t *conn,
 int lldpctl_watch(lldpctl_conn_t *conn);
 
 /**
+ * Abort the wait for the next change.
+ *
+ * @param conn Connection with lldpd.
+ * @return 0.
+ *
+ * This function will abort the watch for a change in function `lldpctl_watch`
+ */
+int lldpctl_watch_abort(lldpctl_conn_t *conn);
+
+/**
  * @defgroup liblldpctl_atom_get_special Retrieving atoms from lldpd
  *
  * Special access functions.

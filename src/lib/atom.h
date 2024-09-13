@@ -65,7 +65,7 @@ struct lldpctl_conn_t {
 	/* Handling notifications */
 	lldpctl_change_callback watch_cb;
 	void *watch_data;
-	int watch_triggered;
+	volatile int watch_triggered;
 };
 
 /* User data for synchronous callbacks. */
